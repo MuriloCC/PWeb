@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input id="numum" type="number">
+    <input id="numdois" type="number">
+
+    <button onclick="allOperations()">calcular</button>
+
+    <script>
+        function allOperations () {
+            let numberOne = document.querySelector('#numum').value
+            let numberTwo = document.querySelector('#numdois').value
+
+            let add = Number(numberOne) + Number(numberTwo)
+            let sub = numberOne - numberTwo
+            let mult = numberOne * numberTwo
+            let div = numberOne / numberTwo
+
+            alert(`A soma é: ${add}, a subtração é ${sub}, a multiplicação é ${mult} e a divisão é ${div}`)
+        }
+    </script>
+</body>
+</html>

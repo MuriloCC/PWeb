@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Média</title>
+</head>
+<body>  
+    <input id="notaum" type="number" />
+    <input id="notadois" type="number" />
+    <input id="notatres" type="number" />
+    <button onclick="resultado()">Calcular média</button>
+
+    <script>
+        function resultado () {
+            let nota1 = document.querySelector('#notaum').value
+            let nota2 = document.querySelector('#notadois').value
+            let nota3 = document.querySelector('#notatres').value
+            let finalResult = parseFloat(nota1) + parseFloat(nota2) + parseFloat(nota3)
+
+            alert('o valor é : ' + parseFloat(finalResult / 3)) 
+        }
+    </script>
+</body>
+</html>
