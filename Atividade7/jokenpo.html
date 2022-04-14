@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Jokenpo</title>
+</head>
+<body>
+    <h1>AGORA É VOCE CONTRA A MAQUINA</h1>
+
+    <div class="container">
+        <div class="input-container">
+            <label for="jokenpo-input">Voce</label>
+            <select name="select-jokenpo" id="select-jokenpo">
+                <option value="pedra">Pedra</option>
+                <option value="papel">Papel</option>
+                <option value="tesoura">Tesoura</option>
+            </select>
+            <button onclick="play()">Escolher</button>
+        
+            <div class="meu-resultado"></div>
+        </div>
+        
+        <h1>VS</h1>
+        <div class="pc-container">
+            <h1>COMPUTADOR</h1>
+            <div class="pc-resultado"></div>
+        </div>
+
+        <div class="resultado-final">
+        </div>
+    </div>
+
+    <script>
+        const play = () => {
+            const select = document.querySelector("#select-jokenpo").value
+            const myResult = document.querySelector(".meu-resultado")
+            const pcResult = document.querySelector(".pc-resultado")
+            const finalResult = document.querySelector(".resultado-final")
+
+            myResult.innerHTML = select
+
+            const prob = ["pedra", "papel", "tesoura"]
+
+
+            const randowPcResult = prob[Math.floor(Math.random() * prob.length)]
+
+            pcResult.innerHTML = randowPcResult
+
+            if (select == randowPcResult) setTimeout(() => alert("EMPATOOOOOOOOU"), 1)
+            if (select == "pedra" && randowPcResult == "tesoura") setTimeout(() => alert("VOCE VENCEU =)"), 1)
+            if (select == "pedra" && randowPcResult == "papel") setTimeout(() => alert("PERDESTESSSSSSS =("), 1)
+            if (select == "tesoura" && randowPcResult == "pedra") setTimeout(() => alert("PERDESTESSSSSSS =("), 1)
+            if (select == "tesoura" && randowPcResult == "papel") setTimeout(() => alert("VOCE VENCEU =)"), 1)
+            if (select == "papel" && randowPcResult == "pedra") setTimeout(() => alert("VOCE VENCEU =)"), 1)
+            if (select == "papel" && randowPcResult == "tesoura") setTimeout(() => alert("PERDESTESSSSSSS =("), 1)
+        }
+
+    </script>
+    
+</body>
+</html>
