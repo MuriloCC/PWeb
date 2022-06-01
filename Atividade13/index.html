@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade 13</title>
+</head>
+<body>
+  <input type="text" id="text-input" value="muras">
+  <input type="checkbox" id="checkbox-1" onchange="onChange1()">
+  <input type="checkbox" id="checkbox-2" onchange="onChange2()">
+
+  <script>
+    function onChange1() {
+      let inputValue = document.querySelector("#text-input")
+      let checkBoxState = document.querySelector("#checkbox-1")
+
+      if(checkBoxState.checked) {
+        inputValue.value = inputValue.value.toUpperCase()
+        return
+      }
+
+      
+      console.log(inputValue)
+
+    }
+
+    function onChange2() {
+      let inputValue = document.querySelector("#text-input")
+      let checkBoxState = document.querySelector("#checkbox-1")
+      
+      inputValue.value = inputValue.value.toLowerCase()
+    }
+  </script>
+</body>
+</html>
